@@ -1,0 +1,867 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02421271C79CCCDF41589F074A41B638 /* Pods-PhatAndPhreshUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A70A9C228776CA40234FF3FFA819B3 /* Pods-PhatAndPhreshUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E5FB2393671E879662FEF3306AEB439 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		2FA3BB9BE0A579C21173530B9F6E56E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
+		37FC4FB525F60008432487D049E0520E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		50A9C77308F683C88B9C5F56F604364C /* PulsingHalo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D396F4A5CEF7DDA9634D55AFA32C45 /* PulsingHalo-dummy.m */; };
+		658DB8390972851239B84EC13603DD80 /* Pods-PhatAndPhresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE766C936FF195DF499D228EFD8D9187 /* Pods-PhatAndPhresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72E69989ED481F3B5803A6B1FB133370 /* PulsingHalo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D56BA71C4358F693DB9876C79A8E7050 /* PulsingHalo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F2FEFA72192BCF03716E0B446D2ED82 /* Pods-PhatAndPhreshTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF32B7836539DEC6937A4AF07D8E09FB /* Pods-PhatAndPhreshTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D8B8901AC11ABC24A4CCEA7711D1B38 /* PulsingHalo.h in Headers */ = {isa = PBXBuildFile; fileRef = C2FA348C601CDD75FDD3F324A3969821 /* PulsingHalo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95E8206E209CD28F45E7E76F6B73B7C4 /* Pods-PhatAndPhreshTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B0F79FAD8B7E73346FC965615771B /* Pods-PhatAndPhreshTests-dummy.m */; };
+		B719C2D6813E4F343AED8CA9CFECB737 /* PulsingHaloLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C72211C096823FB76F00A7B91A671F /* PulsingHaloLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBABA23E20502D694B365E5B171403B0 /* Pods-PhatAndPhreshUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E9B51C6E7EF6B7A1BCEC3FB056A7BC /* Pods-PhatAndPhreshUITests-dummy.m */; };
+		D60B0C0F7A873C068FAA0BF24FDC95FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		D65D802D2180C854E8ED4940DC9C5CD4 /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FAEA8D7311687CE07692ECA2723CAA /* PulsingHaloLayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D8FC34D45E06321B37626A2E1CADAEAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		FA120EC8BEFA6B059BE0DC62D57D2978 /* Pods-PhatAndPhresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CC7C47DDEA00E231BBEEAD452F0BF5 /* Pods-PhatAndPhresh-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EE92DBC375B4120D002C0E4DEB01A9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A5D5A83AD44781BB2D1D9CD05522891;
+			remoteInfo = PulsingHalo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A70A9C228776CA40234FF3FFA819B3 /* Pods-PhatAndPhreshUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhatAndPhreshUITests-umbrella.h"; sourceTree = "<group>"; };
+		1E1B0F79FAD8B7E73346FC965615771B /* Pods-PhatAndPhreshTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhatAndPhreshTests-dummy.m"; sourceTree = "<group>"; };
+		21500B808DA78E061662D6AE269873A1 /* Pods-PhatAndPhresh-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhatAndPhresh-acknowledgements.plist"; sourceTree = "<group>"; };
+		2EF98AF1EE3A7F738472BB7617E32C40 /* Pods-PhatAndPhresh-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhatAndPhresh-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2FF832FBA50C4B28AE10DAEB0BF7DCDD /* Pods-PhatAndPhreshTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhatAndPhreshTests-frameworks.sh"; sourceTree = "<group>"; };
+		3B38892ED020293FEA51B145EAD98811 /* Pods-PhatAndPhreshUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhatAndPhreshUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3C73DE9DB4EE13228C319D8F98054922 /* Pods-PhatAndPhresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhatAndPhresh.release.xcconfig"; sourceTree = "<group>"; };
+		44EF37481E71234A8B6AB8325EA868FD /* Pods_PhatAndPhreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhatAndPhreshUITests.framework; path = "Pods-PhatAndPhreshUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C72211C096823FB76F00A7B91A671F /* PulsingHaloLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PulsingHaloLayer.h; path = PulsingHalo/PulsingHaloLayer.h; sourceTree = "<group>"; };
+		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5677A7929BEA24EDA9CBBD9DF32CE183 /* Pods-PhatAndPhresh-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhatAndPhresh-resources.sh"; sourceTree = "<group>"; };
+		5A6F3C979A7113D57AFF69BD002A0D5B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		612BF3B0788F08EED077494C680CFEFD /* Pods-PhatAndPhresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhatAndPhresh.debug.xcconfig"; sourceTree = "<group>"; };
+		61EF7AEA351BFD35E717B5921FB48DE4 /* PulsingHalo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PulsingHalo.modulemap; sourceTree = "<group>"; };
+		65FAEA8D7311687CE07692ECA2723CAA /* PulsingHaloLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PulsingHaloLayer.m; path = PulsingHalo/PulsingHaloLayer.m; sourceTree = "<group>"; };
+		798D1D25471FE6266F4C10C3C6EADF21 /* Pods-PhatAndPhreshUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhatAndPhreshUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		79FAAB7861BEDB77CB3611BD87737B25 /* Pods-PhatAndPhreshUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhatAndPhreshUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		79FF8D1B017A140997A6141078515660 /* Pods-PhatAndPhreshTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhatAndPhreshTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7A5651599332664947603C374EA326DA /* Pods_PhatAndPhreshTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhatAndPhreshTests.framework; path = "Pods-PhatAndPhreshTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5A54DC30EAFD02692E469733F99086 /* Pods-PhatAndPhreshTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PhatAndPhreshTests.modulemap"; sourceTree = "<group>"; };
+		80AF1749DCBC3566257735D9034D7517 /* Pods_PhatAndPhresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhatAndPhresh.framework; path = "Pods-PhatAndPhresh.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8523E50A9F31CC1746CDA15100DD0BB4 /* Pods-PhatAndPhreshUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhatAndPhreshUITests-resources.sh"; sourceTree = "<group>"; };
+		8EA92C59FE49A10CF5ADC3BE0102227B /* PulsingHalo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PulsingHalo.xcconfig; sourceTree = "<group>"; };
+		91CC7C47DDEA00E231BBEEAD452F0BF5 /* Pods-PhatAndPhresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhatAndPhresh-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A72F38D032890128A5AC2420155C4B9F /* Pods-PhatAndPhresh-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhatAndPhresh-frameworks.sh"; sourceTree = "<group>"; };
+		A8D396F4A5CEF7DDA9634D55AFA32C45 /* PulsingHalo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PulsingHalo-dummy.m"; sourceTree = "<group>"; };
+		AB54509450664CDD70AEC65F0C4434B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE653CDF13BC6F66DF2A65244CF1D45 /* Pods-PhatAndPhreshUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PhatAndPhreshUITests.modulemap"; sourceTree = "<group>"; };
+		B21B740955D5DFCD55926AACBF7B3FD0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B376AF9FD05D7BEB641F131A5BEC5D3B /* Pods-PhatAndPhreshTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhatAndPhreshTests-resources.sh"; sourceTree = "<group>"; };
+		BB7C94CA7A5160D62F3D6401589D8CAC /* Pods-PhatAndPhreshTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhatAndPhreshTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCCC335388FCD87FB47173DEE14D2CF1 /* Pods-PhatAndPhreshUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhatAndPhreshUITests-frameworks.sh"; sourceTree = "<group>"; };
+		BE766C936FF195DF499D228EFD8D9187 /* Pods-PhatAndPhresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhatAndPhresh-umbrella.h"; sourceTree = "<group>"; };
+		BEB5D90D32A02985EE55139CA48CEDE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FA348C601CDD75FDD3F324A3969821 /* PulsingHalo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PulsingHalo.h; path = PulsingHalo/PulsingHalo.h; sourceTree = "<group>"; };
+		C6108857CE704EDF6FD54749CB7FAFB1 /* Pods-PhatAndPhreshTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhatAndPhreshTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C617DC2A36819C3D1CFEABCF46756D53 /* Pods-PhatAndPhreshUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhatAndPhreshUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDA58159B8B1C3F36F0A9CF0FE401B1C /* Pods-PhatAndPhreshTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhatAndPhreshTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D56BA71C4358F693DB9876C79A8E7050 /* PulsingHalo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PulsingHalo-umbrella.h"; sourceTree = "<group>"; };
+		E5E9B51C6E7EF6B7A1BCEC3FB056A7BC /* Pods-PhatAndPhreshUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhatAndPhreshUITests-dummy.m"; sourceTree = "<group>"; };
+		F9D12FD0AF8977FB03936538E4EEC208 /* PulsingHalo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PulsingHalo-prefix.pch"; sourceTree = "<group>"; };
+		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FDD5A9DBA2C88AC76F0F0FC6283A6EB9 /* PulsingHalo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PulsingHalo.framework; path = PulsingHalo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDB38DE96512AC0949C45A833487810 /* Pods-PhatAndPhresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PhatAndPhresh.modulemap"; sourceTree = "<group>"; };
+		FF32B7836539DEC6937A4AF07D8E09FB /* Pods-PhatAndPhreshTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhatAndPhreshTests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30330AD55A9D002C9E8A58C14A31D702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FC4FB525F60008432487D049E0520E /* Foundation.framework in Frameworks */,
+				2FA3BB9BE0A579C21173530B9F6E56E8 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		304030B5F1FC4BAF8932ABED259E98B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E5FB2393671E879662FEF3306AEB439 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4570675B4FC46C50E94DC6A0688C73ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60B0C0F7A873C068FAA0BF24FDC95FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26FE6042E3B1371D785D82B21777597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FC34D45E06321B37626A2E1CADAEAD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2133353365964CA97660EB2BCFC59729 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CA5116A300D706FD351DC160CEA9A /* PulsingHalo */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3E59DA1D1DB9F09BFE1145AA83B5451E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6B198BB9323991A5B92A2414DC836F9 /* Pods-PhatAndPhresh */,
+				76145CBCC3537077B0A3059C98D60832 /* Pods-PhatAndPhreshTests */,
+				FAE46546A95B1786F55703A58E2550A5 /* Pods-PhatAndPhreshUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76145CBCC3537077B0A3059C98D60832 /* Pods-PhatAndPhreshTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB54509450664CDD70AEC65F0C4434B0 /* Info.plist */,
+				7A5A54DC30EAFD02692E469733F99086 /* Pods-PhatAndPhreshTests.modulemap */,
+				79FF8D1B017A140997A6141078515660 /* Pods-PhatAndPhreshTests-acknowledgements.markdown */,
+				CDA58159B8B1C3F36F0A9CF0FE401B1C /* Pods-PhatAndPhreshTests-acknowledgements.plist */,
+				1E1B0F79FAD8B7E73346FC965615771B /* Pods-PhatAndPhreshTests-dummy.m */,
+				2FF832FBA50C4B28AE10DAEB0BF7DCDD /* Pods-PhatAndPhreshTests-frameworks.sh */,
+				B376AF9FD05D7BEB641F131A5BEC5D3B /* Pods-PhatAndPhreshTests-resources.sh */,
+				FF32B7836539DEC6937A4AF07D8E09FB /* Pods-PhatAndPhreshTests-umbrella.h */,
+				C6108857CE704EDF6FD54749CB7FAFB1 /* Pods-PhatAndPhreshTests.debug.xcconfig */,
+				BB7C94CA7A5160D62F3D6401589D8CAC /* Pods-PhatAndPhreshTests.release.xcconfig */,
+			);
+			name = "Pods-PhatAndPhreshTests";
+			path = "Target Support Files/Pods-PhatAndPhreshTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				2133353365964CA97660EB2BCFC59729 /* Pods */,
+				B6464976EF64C6CFF6BA0D9E6377007D /* Products */,
+				3E59DA1D1DB9F09BFE1145AA83B5451E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8E9CA5116A300D706FD351DC160CEA9A /* PulsingHalo */ = {
+			isa = PBXGroup;
+			children = (
+				C2FA348C601CDD75FDD3F324A3969821 /* PulsingHalo.h */,
+				52C72211C096823FB76F00A7B91A671F /* PulsingHaloLayer.h */,
+				65FAEA8D7311687CE07692ECA2723CAA /* PulsingHaloLayer.m */,
+				D2A8565FE2A900FA4CE2CE3E000F8837 /* Support Files */,
+			);
+			name = PulsingHalo;
+			path = PulsingHalo;
+			sourceTree = "<group>";
+		};
+		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
+				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A6B198BB9323991A5B92A2414DC836F9 /* Pods-PhatAndPhresh */ = {
+			isa = PBXGroup;
+			children = (
+				BEB5D90D32A02985EE55139CA48CEDE4 /* Info.plist */,
+				FDDB38DE96512AC0949C45A833487810 /* Pods-PhatAndPhresh.modulemap */,
+				2EF98AF1EE3A7F738472BB7617E32C40 /* Pods-PhatAndPhresh-acknowledgements.markdown */,
+				21500B808DA78E061662D6AE269873A1 /* Pods-PhatAndPhresh-acknowledgements.plist */,
+				91CC7C47DDEA00E231BBEEAD452F0BF5 /* Pods-PhatAndPhresh-dummy.m */,
+				A72F38D032890128A5AC2420155C4B9F /* Pods-PhatAndPhresh-frameworks.sh */,
+				5677A7929BEA24EDA9CBBD9DF32CE183 /* Pods-PhatAndPhresh-resources.sh */,
+				BE766C936FF195DF499D228EFD8D9187 /* Pods-PhatAndPhresh-umbrella.h */,
+				612BF3B0788F08EED077494C680CFEFD /* Pods-PhatAndPhresh.debug.xcconfig */,
+				3C73DE9DB4EE13228C319D8F98054922 /* Pods-PhatAndPhresh.release.xcconfig */,
+			);
+			name = "Pods-PhatAndPhresh";
+			path = "Target Support Files/Pods-PhatAndPhresh";
+			sourceTree = "<group>";
+		};
+		B6464976EF64C6CFF6BA0D9E6377007D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80AF1749DCBC3566257735D9034D7517 /* Pods_PhatAndPhresh.framework */,
+				7A5651599332664947603C374EA326DA /* Pods_PhatAndPhreshTests.framework */,
+				44EF37481E71234A8B6AB8325EA868FD /* Pods_PhatAndPhreshUITests.framework */,
+				FDD5A9DBA2C88AC76F0F0FC6283A6EB9 /* PulsingHalo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2A8565FE2A900FA4CE2CE3E000F8837 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F3C979A7113D57AFF69BD002A0D5B /* Info.plist */,
+				61EF7AEA351BFD35E717B5921FB48DE4 /* PulsingHalo.modulemap */,
+				8EA92C59FE49A10CF5ADC3BE0102227B /* PulsingHalo.xcconfig */,
+				A8D396F4A5CEF7DDA9634D55AFA32C45 /* PulsingHalo-dummy.m */,
+				F9D12FD0AF8977FB03936538E4EEC208 /* PulsingHalo-prefix.pch */,
+				D56BA71C4358F693DB9876C79A8E7050 /* PulsingHalo-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PulsingHalo";
+			sourceTree = "<group>";
+		};
+		FAE46546A95B1786F55703A58E2550A5 /* Pods-PhatAndPhreshUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B21B740955D5DFCD55926AACBF7B3FD0 /* Info.plist */,
+				ABE653CDF13BC6F66DF2A65244CF1D45 /* Pods-PhatAndPhreshUITests.modulemap */,
+				79FAAB7861BEDB77CB3611BD87737B25 /* Pods-PhatAndPhreshUITests-acknowledgements.markdown */,
+				3B38892ED020293FEA51B145EAD98811 /* Pods-PhatAndPhreshUITests-acknowledgements.plist */,
+				E5E9B51C6E7EF6B7A1BCEC3FB056A7BC /* Pods-PhatAndPhreshUITests-dummy.m */,
+				BCCC335388FCD87FB47173DEE14D2CF1 /* Pods-PhatAndPhreshUITests-frameworks.sh */,
+				8523E50A9F31CC1746CDA15100DD0BB4 /* Pods-PhatAndPhreshUITests-resources.sh */,
+				00A70A9C228776CA40234FF3FFA819B3 /* Pods-PhatAndPhreshUITests-umbrella.h */,
+				798D1D25471FE6266F4C10C3C6EADF21 /* Pods-PhatAndPhreshUITests.debug.xcconfig */,
+				C617DC2A36819C3D1CFEABCF46756D53 /* Pods-PhatAndPhreshUITests.release.xcconfig */,
+			);
+			name = "Pods-PhatAndPhreshUITests";
+			path = "Target Support Files/Pods-PhatAndPhreshUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		053A8A6EBBF0F170BD446A4DF98C6152 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72E69989ED481F3B5803A6B1FB133370 /* PulsingHalo-umbrella.h in Headers */,
+				8D8B8901AC11ABC24A4CCEA7711D1B38 /* PulsingHalo.h in Headers */,
+				B719C2D6813E4F343AED8CA9CFECB737 /* PulsingHaloLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570666FE2931E3FE88DF3045E35314CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02421271C79CCCDF41589F074A41B638 /* Pods-PhatAndPhreshUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F75501FE2BA3CA19CE551B486700502 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658DB8390972851239B84EC13603DD80 /* Pods-PhatAndPhresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D36481E841C36E5FE167053D3D19C2E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F2FEFA72192BCF03716E0B446D2ED82 /* Pods-PhatAndPhreshTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A5D5A83AD44781BB2D1D9CD05522891 /* PulsingHalo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11D9D027D3F9B8618F9B7467A2EB37F8 /* Build configuration list for PBXNativeTarget "PulsingHalo" */;
+			buildPhases = (
+				C769C4313145FE1817A02AA180CB39B9 /* Sources */,
+				30330AD55A9D002C9E8A58C14A31D702 /* Frameworks */,
+				053A8A6EBBF0F170BD446A4DF98C6152 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PulsingHalo;
+			productName = PulsingHalo;
+			productReference = FDD5A9DBA2C88AC76F0F0FC6283A6EB9 /* PulsingHalo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E49BE07CC30F2FEF2124A8023A07266 /* Pods-PhatAndPhreshUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C08182E89573F98901F9BE86531DA0 /* Build configuration list for PBXNativeTarget "Pods-PhatAndPhreshUITests" */;
+			buildPhases = (
+				DD4EDE077B6A3993D81D7FB6AD2AA017 /* Sources */,
+				304030B5F1FC4BAF8932ABED259E98B1 /* Frameworks */,
+				570666FE2931E3FE88DF3045E35314CC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PhatAndPhreshUITests";
+			productName = "Pods-PhatAndPhreshUITests";
+			productReference = 44EF37481E71234A8B6AB8325EA868FD /* Pods_PhatAndPhreshUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		93EDE1810D13D423D4CC3175A9049DE3 /* Pods-PhatAndPhresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1873E5CEEE6AE7CB9FE4720AE7A43FB0 /* Build configuration list for PBXNativeTarget "Pods-PhatAndPhresh" */;
+			buildPhases = (
+				9527E7A52DDBC795BCDB2F9EBAE64A8E /* Sources */,
+				4570675B4FC46C50E94DC6A0688C73ED /* Frameworks */,
+				7F75501FE2BA3CA19CE551B486700502 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD0E0A89E0A79B81A892DE4B0634B885 /* PBXTargetDependency */,
+			);
+			name = "Pods-PhatAndPhresh";
+			productName = "Pods-PhatAndPhresh";
+			productReference = 80AF1749DCBC3566257735D9034D7517 /* Pods_PhatAndPhresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD489EB955144E01D5006ADC25A3BD6B /* Pods-PhatAndPhreshTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 457ECA3718288284776A2FFF36C07710 /* Build configuration list for PBXNativeTarget "Pods-PhatAndPhreshTests" */;
+			buildPhases = (
+				3E72ECEB3E029747BA853B4CF5B44129 /* Sources */,
+				D26FE6042E3B1371D785D82B21777597 /* Frameworks */,
+				D36481E841C36E5FE167053D3D19C2E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PhatAndPhreshTests";
+			productName = "Pods-PhatAndPhreshTests";
+			productReference = 7A5651599332664947603C374EA326DA /* Pods_PhatAndPhreshTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B6464976EF64C6CFF6BA0D9E6377007D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93EDE1810D13D423D4CC3175A9049DE3 /* Pods-PhatAndPhresh */,
+				DD489EB955144E01D5006ADC25A3BD6B /* Pods-PhatAndPhreshTests */,
+				8E49BE07CC30F2FEF2124A8023A07266 /* Pods-PhatAndPhreshUITests */,
+				3A5D5A83AD44781BB2D1D9CD05522891 /* PulsingHalo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E72ECEB3E029747BA853B4CF5B44129 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95E8206E209CD28F45E7E76F6B73B7C4 /* Pods-PhatAndPhreshTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9527E7A52DDBC795BCDB2F9EBAE64A8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA120EC8BEFA6B059BE0DC62D57D2978 /* Pods-PhatAndPhresh-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C769C4313145FE1817A02AA180CB39B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A9C77308F683C88B9C5F56F604364C /* PulsingHalo-dummy.m in Sources */,
+				D65D802D2180C854E8ED4940DC9C5CD4 /* PulsingHaloLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4EDE077B6A3993D81D7FB6AD2AA017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBABA23E20502D694B365E5B171403B0 /* Pods-PhatAndPhreshUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD0E0A89E0A79B81A892DE4B0634B885 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PulsingHalo;
+			target = 3A5D5A83AD44781BB2D1D9CD05522891 /* PulsingHalo */;
+			targetProxy = 7EE92DBC375B4120D002C0E4DEB01A9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C90599EC21B56891999B7012AC14794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 612BF3B0788F08EED077494C680CFEFD /* Pods-PhatAndPhresh.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhatAndPhresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhatAndPhresh/Pods-PhatAndPhresh.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhatAndPhresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0CD845ED46025F9A0CC0F9C3C6BE6942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798D1D25471FE6266F4C10C3C6EADF21 /* Pods-PhatAndPhreshUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhatAndPhreshUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhatAndPhreshUITests/Pods-PhatAndPhreshUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhatAndPhreshUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12C4B864767C59600DBFA238F1E2F8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		13696BF133B53C914DC9234F7E9508DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C73DE9DB4EE13228C319D8F98054922 /* Pods-PhatAndPhresh.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhatAndPhresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhatAndPhresh/Pods-PhatAndPhresh.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhatAndPhresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1FE3BD76C91287FE6366262BE49C0C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB7C94CA7A5160D62F3D6401589D8CAC /* Pods-PhatAndPhreshTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhatAndPhreshTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhatAndPhreshTests/Pods-PhatAndPhreshTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhatAndPhreshTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E57C9C45DEA5DEE7503B944CA0F10DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA92C59FE49A10CF5ADC3BE0102227B /* PulsingHalo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PulsingHalo/PulsingHalo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PulsingHalo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PulsingHalo/PulsingHalo.modulemap";
+				PRODUCT_NAME = PulsingHalo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5A0E687AB9F96FAFE10997250727E71F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA92C59FE49A10CF5ADC3BE0102227B /* PulsingHalo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PulsingHalo/PulsingHalo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PulsingHalo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PulsingHalo/PulsingHalo.modulemap";
+				PRODUCT_NAME = PulsingHalo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E041EBBEEF808B571244CA2F9BE8DF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C617DC2A36819C3D1CFEABCF46756D53 /* Pods-PhatAndPhreshUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhatAndPhreshUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhatAndPhreshUITests/Pods-PhatAndPhreshUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhatAndPhreshUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C980515EC8A0426714A00046D6F02BA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6108857CE704EDF6FD54749CB7FAFB1 /* Pods-PhatAndPhreshTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhatAndPhreshTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhatAndPhreshTests/Pods-PhatAndPhreshTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PhatAndPhreshTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11D9D027D3F9B8618F9B7467A2EB37F8 /* Build configuration list for PBXNativeTarget "PulsingHalo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0E687AB9F96FAFE10997250727E71F /* Debug */,
+				4E57C9C45DEA5DEE7503B944CA0F10DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1873E5CEEE6AE7CB9FE4720AE7A43FB0 /* Build configuration list for PBXNativeTarget "Pods-PhatAndPhresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C90599EC21B56891999B7012AC14794 /* Debug */,
+				13696BF133B53C914DC9234F7E9508DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59F0302F2371FCC6B73EF0A418D40734 /* Debug */,
+				12C4B864767C59600DBFA238F1E2F8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		457ECA3718288284776A2FFF36C07710 /* Build configuration list for PBXNativeTarget "Pods-PhatAndPhreshTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C980515EC8A0426714A00046D6F02BA3 /* Debug */,
+				1FE3BD76C91287FE6366262BE49C0C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C08182E89573F98901F9BE86531DA0 /* Build configuration list for PBXNativeTarget "Pods-PhatAndPhreshUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD845ED46025F9A0CC0F9C3C6BE6942 /* Debug */,
+				9E041EBBEEF808B571244CA2F9BE8DF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
