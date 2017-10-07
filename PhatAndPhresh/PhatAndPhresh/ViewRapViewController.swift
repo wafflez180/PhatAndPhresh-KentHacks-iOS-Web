@@ -172,8 +172,8 @@ class ViewRapViewController: UIViewController {
             textField.placeholder = "Enter Verse Title"
         }
         
-        alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
         
         self.present(alertController, animated: true, completion: nil)
     }

@@ -166,6 +166,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
         let defaults = UserDefaults.standard
