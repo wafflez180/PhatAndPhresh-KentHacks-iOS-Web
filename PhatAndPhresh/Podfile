@@ -6,7 +6,7 @@ target 'PhatAndPhresh' do
   use_frameworks!
 
   # Pods for PhatAndPhresh
-    pod "PulsingHalo"
+    pod "Pulsator"
 
   target 'PhatAndPhreshTests' do
     inherit! :search_paths

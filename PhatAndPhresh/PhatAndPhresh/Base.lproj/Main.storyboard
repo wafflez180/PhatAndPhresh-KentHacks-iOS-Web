@@ -25,14 +25,46 @@ Phresh</string>
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-EN-qAh">
+                                <rect key="frame" x="100" y="246" width="175" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KxO-Dc-2Zt" customClass="GenerateButton" customModule="PhatAndPhresh" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                        <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="175" id="9GK-eL-rE4"/>
+                                            <constraint firstAttribute="height" constant="175" id="Wwg-W9-EDb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Give me some phat bars">
+                                            <color key="titleColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="2Xb-96-0ab"/>
+                                    <constraint firstItem="KxO-Dc-2Zt" firstAttribute="leading" secondItem="UfI-EN-qAh" secondAttribute="leading" id="BAW-Zh-gUh"/>
+                                    <constraint firstAttribute="height" constant="175" id="OZW-Gv-MGP"/>
+                                    <constraint firstAttribute="trailing" secondItem="KxO-Dc-2Zt" secondAttribute="trailing" id="Zid-GI-pA5"/>
+                                    <constraint firstAttribute="bottom" secondItem="KxO-Dc-2Zt" secondAttribute="bottom" id="mJL-dI-ZqL"/>
+                                    <constraint firstItem="KxO-Dc-2Zt" firstAttribute="top" secondItem="UfI-EN-qAh" secondAttribute="top" id="maT-2P-ieD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UfI-EN-qAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RtL-Su-R5x"/>
                             <constraint firstItem="BWf-MS-mVi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SFY-yn-KzT"/>
+                            <constraint firstItem="UfI-EN-qAh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jDX-rc-Htq"/>
                             <constraint firstItem="BWf-MS-mVi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="v4L-8S-fxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonContainerView" destination="UfI-EN-qAh" id="vLd-yh-UQg"/>
+                        <outlet property="generateButton" destination="KxO-Dc-2Zt" id="cYS-d9-MlV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

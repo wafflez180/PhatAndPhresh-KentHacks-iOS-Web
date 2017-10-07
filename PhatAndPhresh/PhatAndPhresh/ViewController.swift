@@ -7,17 +7,37 @@
 //
 
 import UIKit
+import Pulsator
 
 class ViewController: UIViewController {
     
+    @IBOutlet var buttonContainerView: UIView!
+    @IBOutlet var generateButton: GenerateButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground();
+        setupUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: ViewController
+    
+    func setupUI(){
+        setGradientBackground();
+        createPulsingHalo();
+    }
+    
+    func createPulsingHalo(){
+        let pulsator = Pulsator()
+        pulsator.frame = buttonContainerView.frame
+        buttonContainerView.layer.addSublayer(pulsator)
+        pulsator.radius = buttonContainerView.frame.size.width
+        pulsator.backgroundColor = generateButton.backgroundColor?.cgColor
+        pulsator.start()
     }
     
     func setGradientBackground() {
