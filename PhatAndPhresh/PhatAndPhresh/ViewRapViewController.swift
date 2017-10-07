@@ -11,10 +11,16 @@ import NVActivityIndicatorView
 import AudioToolbox
 import Alamofire
 
+protocol ViewRapVCDelegate: class {
+    func dismissingVC()
+}
+
 class ViewRapViewController: UIViewController {
 
     @IBOutlet var textView: UITextView!
     @IBOutlet var activityIndicator: NVActivityIndicatorView!
+    @IBOutlet var playButton: UIButton!
+    weak var delegate: ViewRapVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,10 +83,12 @@ class ViewRapViewController: UIViewController {
         generator.impactOccurred()
         if !self.activityIndicator.isAnimating {
             self.activityIndicator.startAnimating()
+            self.playButton.isEnabled = false
         }
         requestRap { newRapBars in
             self.textView.attributedText = self.getHighlightedText(rapBars: self.textView.text+"\n"+newRapBars, rhymedWords: [])
             self.activityIndicator.stopAnimating()
+            self.playButton.isEnabled = true
         }
     }
     
@@ -88,6 +96,58 @@ class ViewRapViewController: UIViewController {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
         self.dismiss(animated: true)
+    }
+    
+    @IBAction func pressedSaveButton(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
+        let defaults = UserDefaults.standard
+        var savedTitlesArray = defaults.stringArray(forKey: "SavedRapTitles") ?? [String]()
+        var savedRapsArray = defaults.stringArray(forKey: "SavedRapBars") ?? [String]()
+        
+        // Add title and rap bars
+        getRapBarTitle { title in
+            var savedTitle:String = title
+            if title == "" {
+                savedTitle = "Dope Rap #" + String(savedTitlesArray.count+1)
+            }
+            
+            savedTitlesArray.append(savedTitle)
+            savedRapsArray.append(self.textView.text)
+            
+            defaults.set(savedTitlesArray, forKey: "SavedRapTitles")
+            defaults.set(savedRapsArray, forKey: "SavedRapBars")
+            
+            self.delegate?.dismissingVC()
+            self.dismiss(animated: true)
+        }
+    }
+    
+    func getRapBarTitle(completion: @escaping (_ result: String) -> Void){
+        let alertController = UIAlertController(title: "Save Rap Bars", message: "Please type the title of this verse.", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+            print("Title: \(String(describing: firstTextField.text))")
+            completion(firstTextField.text!)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Verse Title"
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - API

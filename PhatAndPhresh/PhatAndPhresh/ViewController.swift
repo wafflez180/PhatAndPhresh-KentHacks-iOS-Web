@@ -13,11 +13,12 @@ import NVActivityIndicatorView
 import JTMaterialTransition
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ViewRapVCDelegate {
     
     @IBOutlet var buttonContainerView: SpringView!
     @IBOutlet var generateButton: GenerateButton!
     @IBOutlet var activityIndicator: NVActivityIndicatorView!
+    @IBOutlet var collectionView: UICollectionView!
     
     @IBOutlet var generateBWidthConstraint: NSLayoutConstraint!
     @IBOutlet var generateBHeightConstraint: NSLayoutConstraint!
@@ -29,6 +30,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         self.transition = JTMaterialTransition(animatedView: self.generateButton)
+        self.collectionView.register(UINib(nibName: "SavedRapCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "savedRapID")
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +89,7 @@ class ViewController: UIViewController {
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self.transition
         controller.setupTextView(rapBars:rapBars)
+        controller.delegate = self
         
         self.present(controller, animated: true, completion: {
             self.activityIndicator.stopAnimating()
@@ -119,8 +124,43 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: Actions
+    // MARK: - UICollectionViewDataSource protocol
     
+    // tell the collection view how many cells to make
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let defaults = UserDefaults.standard
+        var savedTitlesArray = defaults.stringArray(forKey: "SavedRapTitles") ?? [String]()
+        return savedTitlesArray.count
+    }
+    
+    // make a cell for each cell index path
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "savedRapID", for: indexPath) as! SavedRapCollectionViewCell
+        
+        let defaults = UserDefaults.standard
+        var savedTitlesArray = defaults.stringArray(forKey: "SavedRapTitles") ?? [String]()
+        cell.title.text = savedTitlesArray[indexPath.row]
+
+        return cell
+    }
+    
+    // MARK: - UICollectionViewDelegate protocol
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
+        //self.segueToRapVC(rapBars: rapBars)
+    }
+    
+    // MARK: - ViewRapVCDelegate
+    
+    func dismissingVC() {
+        collectionView.reloadData()
+    }
+
+    // MARK: Actions
+
     @IBAction func pressedDownOnGenerate(_ sender: Any) {
         generateButton.scaleX = 0.8
         generateButton.scaleY = 0.8

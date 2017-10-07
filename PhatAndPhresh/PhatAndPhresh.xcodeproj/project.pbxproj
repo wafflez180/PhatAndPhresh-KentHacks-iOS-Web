@@ -18,6 +18,8 @@
 		CA0C27571F88685D00F17856 /* PhatAndPhreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C27561F88685D00F17856 /* PhatAndPhreshTests.swift */; };
 		CA0C27621F88685D00F17856 /* PhatAndPhreshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C27611F88685D00F17856 /* PhatAndPhreshUITests.swift */; };
 		CA3BDCDB1F88B20900809501 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BDCDA1F88B20900809501 /* StringExtension.swift */; };
+		CA9AF6F11F8946F2008F150C /* SavedRapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9AF6EF1F8946F2008F150C /* SavedRapCollectionViewCell.swift */; };
+		CA9AF6F21F8946F2008F150C /* SavedRapCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9AF6F01F8946F2008F150C /* SavedRapCollectionViewCell.xib */; };
 		CAB461F71F888EE400EB0A2F /* ViewRapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB461F61F888EE400EB0A2F /* ViewRapViewController.swift */; };
 		CAE6AE971F8872E40064AB40 /* GenerateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6AE961F8872E40064AB40 /* GenerateButton.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		CA0C27611F88685D00F17856 /* PhatAndPhreshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhatAndPhreshUITests.swift; sourceTree = "<group>"; };
 		CA0C27631F88685D00F17856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3BDCDA1F88B20900809501 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CA9AF6EF1F8946F2008F150C /* SavedRapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRapCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA9AF6F01F8946F2008F150C /* SavedRapCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedRapCollectionViewCell.xib; sourceTree = "<group>"; };
 		CAB461F61F888EE400EB0A2F /* ViewRapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRapViewController.swift; sourceTree = "<group>"; };
 		CAE6AE961F8872E40064AB40 /* GenerateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateButton.swift; sourceTree = "<group>"; };
 		FA82069E2F284DAB1C063C0C /* Pods-PhatAndPhreshUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhatAndPhreshUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhatAndPhreshUITests/Pods-PhatAndPhreshUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				CA0C27451F88685D00F17856 /* Main.storyboard */,
 				CAB461F61F888EE400EB0A2F /* ViewRapViewController.swift */,
 				CAE6AE961F8872E40064AB40 /* GenerateButton.swift */,
+				CA9AF6EF1F8946F2008F150C /* SavedRapCollectionViewCell.swift */,
+				CA9AF6F01F8946F2008F150C /* SavedRapCollectionViewCell.xib */,
 				CA0C27481F88685D00F17856 /* Assets.xcassets */,
 				CA3BDCDA1F88B20900809501 /* StringExtension.swift */,
 				CA0C274A1F88685D00F17856 /* LaunchScreen.storyboard */,
@@ -290,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9AF6F21F8946F2008F150C /* SavedRapCollectionViewCell.xib in Resources */,
 				CA0C274C1F88685D00F17856 /* LaunchScreen.storyboard in Resources */,
 				CA0C27491F88685D00F17856 /* Assets.xcassets in Resources */,
 				CA0C27471F88685D00F17856 /* Main.storyboard in Resources */,
@@ -477,6 +484,7 @@
 			files = (
 				CA0C27441F88685D00F17856 /* ViewController.swift in Sources */,
 				CAE6AE971F8872E40064AB40 /* GenerateButton.swift in Sources */,
+				CA9AF6F11F8946F2008F150C /* SavedRapCollectionViewCell.swift in Sources */,
 				CA3BDCDB1F88B20900809501 /* StringExtension.swift in Sources */,
 				CA0C27421F88685D00F17856 /* AppDelegate.swift in Sources */,
 				CAB461F71F888EE400EB0A2F /* ViewRapViewController.swift in Sources */,

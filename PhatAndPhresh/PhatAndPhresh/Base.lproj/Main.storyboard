@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,12 +85,29 @@ Phresh</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeIn"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Y0-ym-2LC">
+                                <rect key="frame" x="10" y="567" width="355" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9km-KO-bR0"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KxZ-Wg-5gx">
+                                    <size key="itemSize" width="140" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Y0-ym-2LC" secondAttribute="bottom" id="ERu-DJ-gIh"/>
                             <constraint firstItem="UfI-EN-qAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RtL-Su-R5x"/>
                             <constraint firstItem="BWf-MS-mVi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SFY-yn-KzT"/>
                             <constraint firstItem="UfI-EN-qAh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jDX-rc-Htq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Y0-ym-2LC" secondAttribute="trailing" constant="10" id="mae-4s-puz"/>
+                            <constraint firstItem="3Y0-ym-2LC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nVv-07-UEe"/>
                             <constraint firstItem="BWf-MS-mVi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="v4L-8S-fxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -97,6 +115,7 @@ Phresh</string>
                     <connections>
                         <outlet property="activityIndicator" destination="Iq8-5M-y3K" id="hhJ-ki-Bfg"/>
                         <outlet property="buttonContainerView" destination="UfI-EN-qAh" id="vLd-yh-UQg"/>
+                        <outlet property="collectionView" destination="3Y0-ym-2LC" id="Okf-63-B9D"/>
                         <outlet property="generateBHeightConstraint" destination="Wwg-W9-EDb" id="wFG-7i-j0G"/>
                         <outlet property="generateBWidthConstraint" destination="9GK-eL-rE4" id="dAG-Hl-Bqn"/>
                         <outlet property="generateButton" destination="KxO-Dc-2Zt" id="cYS-d9-MlV"/>
@@ -129,15 +148,8 @@ Phresh</string>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-pM-3vu">
-                                <rect key="frame" x="50" y="582" width="60" height="60"/>
-                                <state key="normal" image="Exit Button"/>
-                                <connections>
-                                    <action selector="pressedExitButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="eLq-Id-bPE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-p0-6vE">
-                                <rect key="frame" x="265" y="582" width="60" height="60"/>
+                                <rect key="frame" x="287.5" y="582" width="60" height="60"/>
                                 <state key="normal" image="Share Button"/>
                                 <connections>
                                     <action selector="pressedShareButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="gKS-y4-hNp"/>
@@ -158,32 +170,49 @@ Phresh</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0n-BO-iHj">
-                                <rect key="frame" x="147.5" y="562" width="80" height="80"/>
+                                <rect key="frame" x="107.5" y="572" width="70" height="70"/>
+                                <state key="normal" image="Save Button"/>
+                                <connections>
+                                    <action selector="pressedSaveButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="Bh2-fb-Cbk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0M-bf-uKT">
+                                <rect key="frame" x="197.5" y="572" width="70" height="70"/>
                                 <state key="normal" image="Play Button"/>
                                 <connections>
-                                    <action selector="pressedPlayButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="7Yx-Bu-12p"/>
+                                    <action selector="pressedPlayButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="kmX-sn-ZDf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-pM-3vu">
+                                <rect key="frame" x="27.5" y="582" width="60" height="60"/>
+                                <state key="normal" image="Exit Button"/>
+                                <connections>
+                                    <action selector="pressedExitButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="eLq-Id-bPE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZsH-pM-3vu" firstAttribute="top" secondItem="VX5-hF-aIv" secondAttribute="bottom" constant="50" id="0gM-NH-4T3"/>
-                            <constraint firstItem="h0n-BO-iHj" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="1xC-eq-J8N"/>
+                            <constraint firstItem="h0n-BO-iHj" firstAttribute="trailing" secondItem="SLz-YL-Woh" secondAttribute="centerX" constant="-10" id="1xC-eq-J8N"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="CPh-p0-6vE" secondAttribute="bottom" constant="25" id="6Er-N7-WIQ"/>
+                            <constraint firstItem="Y0M-bf-uKT" firstAttribute="leading" secondItem="SLz-YL-Woh" secondAttribute="centerX" constant="10" id="7Fn-sh-uQq"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerY" secondItem="SLz-YL-Woh" secondAttribute="centerY" id="Bjf-xY-Ugy"/>
+                            <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="Y0M-bf-uKT" secondAttribute="bottom" constant="25" id="Fqi-3l-TNy"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="VX5-hF-aIv" secondAttribute="trailing" constant="20" id="Loq-l5-G5A"/>
-                            <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="CPh-p0-6vE" secondAttribute="trailing" constant="50" id="Mqo-FK-sQg"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="20" id="Rab-OB-jJx"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="h0n-BO-iHj" secondAttribute="bottom" constant="25" id="SNl-DW-GYy"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="bKD-QJ-Pbj"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="ZsH-pM-3vu" secondAttribute="bottom" constant="25" id="c26-pJ-jWv"/>
+                            <constraint firstItem="h0n-BO-iHj" firstAttribute="leading" secondItem="ZsH-pM-3vu" secondAttribute="trailing" constant="20" id="cgc-6K-Ib6"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" constant="20" id="ckv-ZF-D71"/>
-                            <constraint firstItem="ZsH-pM-3vu" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="50" id="waQ-98-vjI"/>
+                            <constraint firstItem="CPh-p0-6vE" firstAttribute="leading" secondItem="Y0M-bf-uKT" secondAttribute="trailing" constant="20" id="vsS-4D-YMD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fKt-Au-FWn"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="ID1-um-tlS" id="feb-pk-i7s"/>
+                        <outlet property="playButton" destination="Y0M-bf-uKT" id="1IN-Ad-Z7h"/>
                         <outlet property="textView" destination="VX5-hF-aIv" id="CGg-RV-wSY"/>
                     </connections>
                 </viewController>
@@ -194,7 +223,8 @@ Phresh</string>
     </scenes>
     <resources>
         <image name="Exit Button" width="60" height="60"/>
-        <image name="Play Button" width="80" height="80"/>
+        <image name="Play Button" width="70" height="70"/>
+        <image name="Save Button" width="70" height="70"/>
         <image name="Share Button" width="60" height="60"/>
     </resources>
 </document>
