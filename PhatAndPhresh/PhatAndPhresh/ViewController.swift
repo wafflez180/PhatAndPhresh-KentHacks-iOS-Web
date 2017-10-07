@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet var generateBHeightConstraint: NSLayoutConstraint!
     
     let repeatedPulsator = Pulsator()
-    let greenBGGradient:CAGradientLayer = CAGradientLayer()
     var transition: JTMaterialTransition?
     
     override func viewDidLoad() {
@@ -40,7 +39,6 @@ class ViewController: UIViewController {
     
     func setupUI(){
         setupGradientBackground()
-        setupGreenBGGradient()
         createPulsingHalo()
     }
     
@@ -65,19 +63,6 @@ class ViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func setupGreenBGGradient() {
-        let colorTop =  UIColor(red: 80.0/255.0, green: 227.0/255.0, blue: 194.0/255.0, alpha: 0.75).cgColor
-        let colorBottom = UIColor(red: 80.0/255.0, green: 227.0/255.0, blue: 194.0/255.0, alpha: 0.75).cgColor
-        
-        greenBGGradient.colors = [ colorTop, colorBottom]
-        greenBGGradient.locations = [ 0.0, 1.0]
-        greenBGGradient.frame = self.view.bounds
-        
-        self.view.layer.insertSublayer(greenBGGradient, at: 1)
-        greenBGGradient.opacity = 0.0
-    }
-
-    
     func createSinglePulse(){
         let pulsator = Pulsator()
         pulsator.frame = CGRect(x: buttonContainerView.frame.size.width/2, y: buttonContainerView.frame.size.height/2, width: 0, height: 0)
@@ -98,7 +83,11 @@ class ViewController: UIViewController {
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self.transition
         
-        self.present(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: {
+            self.activityIndicator.stopAnimating()
+            self.repeatedPulsator.start()
+            self.generateButton.setTitle("Give me some phat bars", for: .normal)
+        })
     }
     
     // MARK: Actions
@@ -116,9 +105,6 @@ class ViewController: UIViewController {
         if !activityIndicator.isAnimating {
             activityIndicator.startAnimating()
         }
-        UIView.animate(withDuration: 10.0, delay: 0.0, options: .curveEaseIn, animations: {
-            self.greenBGGradient.opacity = 1.0
-        })
         segueToRapVC()
     }
 }
