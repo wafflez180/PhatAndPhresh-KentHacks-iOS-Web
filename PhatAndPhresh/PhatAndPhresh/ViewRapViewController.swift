@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class ViewRapViewController: UIViewController {
 
     @IBOutlet var textView: UITextView!
-    
+    @IBOutlet var activityIndicator: NVActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,21 @@ class ViewRapViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func pressedShareButton(_ sender: Any) {
+        
+        // set up activity view controller
+        let textToShare = [ "Check out my phresh rap bars generated from Phat & Phresh! \n\n" + textView.text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        
+        // present the view controller
+        activityIndicator.startAnimating()
+        self.present(activityViewController, animated: true, completion: {
+            self.activityIndicator.stopAnimating()
+        })
     }
     
     @IBAction func pressedPlayButton(_ sender: Any) {
+        
     }
     
     @IBAction func pressedExitButton(_ sender: Any) {

@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     func setupUI(){
         setupGradientBackground()
         createPulsingHalo()
+        generateButton.setTitle(getRandomizedGenButtonTitle(), for: .normal)
     }
     
     func createPulsingHalo(){
@@ -88,8 +89,14 @@ class ViewController: UIViewController {
         self.present(controller, animated: true, completion: {
             self.activityIndicator.stopAnimating()
             self.repeatedPulsator.start()
-            self.generateButton.setTitle("Give me some phat bars", for: .normal)
+            self.generateButton.setTitle(self.getRandomizedGenButtonTitle(), for: .normal)
         })
+    }
+    
+    func getRandomizedGenButtonTitle() -> String {
+        let genButtonTextList = [ "Give me some phat bars" , "Give me some phire bars", "Give me some phresh bars" , "Drop some phire bars", "Spit some phire bars"]
+        let randIndex = Int(arc4random_uniform(UInt32(Int(genButtonTextList.count))))
+        return genButtonTextList[randIndex]
     }
     
     func requestRap(completion: @escaping (_ result: String) -> Void) {

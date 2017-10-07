@@ -143,14 +143,30 @@ Phresh</string>
                                     <action selector="pressedShareButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="gKS-y4-hNp"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ID1-um-tlS" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="162.5" y="308" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FEy-YY-JEf"/>
+                                    <constraint firstAttribute="width" constant="50" id="Pds-uf-Gpp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineSpinFadeLoader"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="CPh-p0-6vE" secondAttribute="bottom" constant="25" id="6Er-N7-WIQ"/>
+                            <constraint firstItem="ID1-um-tlS" firstAttribute="centerY" secondItem="SLz-YL-Woh" secondAttribute="centerY" id="Bjf-xY-Ugy"/>
                             <constraint firstItem="dkX-h4-ZGN" firstAttribute="leading" secondItem="ZsH-pM-3vu" secondAttribute="trailing" constant="40" id="BqF-OA-Xr8"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="VX5-hF-aIv" secondAttribute="trailing" constant="20" id="Loq-l5-G5A"/>
                             <constraint firstItem="dkX-h4-ZGN" firstAttribute="top" secondItem="VX5-hF-aIv" secondAttribute="bottom" constant="50" id="OXP-jy-f2c"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="20" id="Rab-OB-jJx"/>
+                            <constraint firstItem="ID1-um-tlS" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="bKD-QJ-Pbj"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="ZsH-pM-3vu" secondAttribute="bottom" constant="25" id="c26-pJ-jWv"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" constant="20" id="ckv-ZF-D71"/>
                             <constraint firstItem="CPh-p0-6vE" firstAttribute="leading" secondItem="dkX-h4-ZGN" secondAttribute="trailing" constant="40" id="vMq-UA-H4D"/>
@@ -160,6 +176,7 @@ Phresh</string>
                         <viewLayoutGuide key="safeArea" id="fKt-Au-FWn"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ID1-um-tlS" id="feb-pk-i7s"/>
                         <outlet property="textView" destination="VX5-hF-aIv" id="CGg-RV-wSY"/>
                     </connections>
                 </viewController>
