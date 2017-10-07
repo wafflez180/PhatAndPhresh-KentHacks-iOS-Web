@@ -10,6 +10,7 @@ import UIKit
 import Pulsator
 import Spring
 import NVActivityIndicatorView
+import JTMaterialTransition
 
 class ViewController: UIViewController {
     
@@ -22,10 +23,12 @@ class ViewController: UIViewController {
     
     let repeatedPulsator = Pulsator()
     let greenBGGradient:CAGradientLayer = CAGradientLayer()
+    var transition: JTMaterialTransition?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        self.transition = JTMaterialTransition(animatedView: self.generateButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,6 +90,17 @@ class ViewController: UIViewController {
         pulsator.start()
     }
     
+    func segueToRapVC(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ViewRapViewController")
+        
+        controller.view.backgroundColor = generateButton.backgroundColor
+        controller.modalPresentationStyle = .custom
+        controller.transitioningDelegate = self.transition
+        
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     // MARK: Actions
     
     @IBAction func pressedDownOnGenerate(_ sender: Any) {
@@ -105,6 +119,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 10.0, delay: 0.0, options: .curveEaseIn, animations: {
             self.greenBGGradient.opacity = 1.0
         })
+        segueToRapVC()
     }
 }
 
