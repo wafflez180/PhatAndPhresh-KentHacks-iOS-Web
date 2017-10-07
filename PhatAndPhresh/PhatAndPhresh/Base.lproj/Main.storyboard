@@ -25,7 +25,7 @@ Phresh</string>
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-EN-qAh">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-EN-qAh" customClass="View">
                                 <rect key="frame" x="100" y="246" width="175" height="175"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KxO-Dc-2Zt" customClass="GenerateButton" customModule="PhatAndPhresh" customModuleProvider="target">
@@ -39,17 +39,50 @@ Phresh</string>
                                         <state key="normal" title="Give me some phat bars">
                                             <color key="titleColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedDownOnGenerate:" destination="BYZ-38-t0r" eventType="touchDown" id="MdQ-cJ-eOU"/>
+                                            <action selector="pressedGenerateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1x-GW-XW6"/>
+                                        </connections>
                                     </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iq8-5M-y3K" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineScalePulseOut"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="2Xb-96-0ab"/>
-                                    <constraint firstItem="KxO-Dc-2Zt" firstAttribute="leading" secondItem="UfI-EN-qAh" secondAttribute="leading" id="BAW-Zh-gUh"/>
+                                    <constraint firstItem="KxO-Dc-2Zt" firstAttribute="centerY" secondItem="UfI-EN-qAh" secondAttribute="centerY" id="4OB-gq-8zm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iq8-5M-y3K" secondAttribute="trailing" id="7FK-XJ-zP3"/>
+                                    <constraint firstItem="KxO-Dc-2Zt" firstAttribute="centerX" secondItem="UfI-EN-qAh" secondAttribute="centerX" id="KVg-0Z-eeM"/>
+                                    <constraint firstItem="Iq8-5M-y3K" firstAttribute="top" secondItem="UfI-EN-qAh" secondAttribute="top" id="Klb-8l-wh1"/>
                                     <constraint firstAttribute="height" constant="175" id="OZW-Gv-MGP"/>
-                                    <constraint firstAttribute="trailing" secondItem="KxO-Dc-2Zt" secondAttribute="trailing" id="Zid-GI-pA5"/>
-                                    <constraint firstAttribute="bottom" secondItem="KxO-Dc-2Zt" secondAttribute="bottom" id="mJL-dI-ZqL"/>
-                                    <constraint firstItem="KxO-Dc-2Zt" firstAttribute="top" secondItem="UfI-EN-qAh" secondAttribute="top" id="maT-2P-ieD"/>
+                                    <constraint firstItem="Iq8-5M-y3K" firstAttribute="leading" secondItem="UfI-EN-qAh" secondAttribute="leading" id="RSn-Dq-XgC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iq8-5M-y3K" secondAttribute="bottom" id="XDX-gX-jtx"/>
+                                    <constraint firstItem="Iq8-5M-y3K" firstAttribute="centerX" secondItem="UfI-EN-qAh" secondAttribute="centerX" id="eoR-Id-4Jh"/>
+                                    <constraint firstItem="Iq8-5M-y3K" firstAttribute="centerY" secondItem="UfI-EN-qAh" secondAttribute="centerY" id="z6c-Db-dsT"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeIn"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,7 +95,10 @@ Phresh</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Iq8-5M-y3K" id="hhJ-ki-Bfg"/>
                         <outlet property="buttonContainerView" destination="UfI-EN-qAh" id="vLd-yh-UQg"/>
+                        <outlet property="generateBHeightConstraint" destination="Wwg-W9-EDb" id="wFG-7i-j0G"/>
+                        <outlet property="generateBWidthConstraint" destination="9GK-eL-rE4" id="dAG-Hl-Bqn"/>
                         <outlet property="generateButton" destination="KxO-Dc-2Zt" id="cYS-d9-MlV"/>
                     </connections>
                 </viewController>

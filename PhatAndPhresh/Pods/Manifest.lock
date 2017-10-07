@@ -1,12 +1,33 @@
 PODS:
+  - JTMaterialTransition (2.0.1)
+  - NVActivityIndicatorView (4.0.0):
+    - NVActivityIndicatorView/Presenter (= 4.0.0)
+  - NVActivityIndicatorView/Presenter (4.0.0)
   - Pulsator (0.4.0)
+  - Spring (1.0.3)
 
 DEPENDENCIES:
+  - JTMaterialTransition (~> 2.0)
+  - NVActivityIndicatorView
   - Pulsator
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift4`)
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift4
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: b65cb00a1adc7e810e2ad10b174b840b6d520ac3
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  JTMaterialTransition: 2350b44b404d1982a7ba755866cc65da452f4eec
+  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   Pulsator: a0e7c006790a576de63280b2f0552ea1c1b83ce0
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: 1b24478fab5bd73318184592c9218b6ed260095c
+PODFILE CHECKSUM: 954a3b9b7d105579d909276d4ae79654483d9e30
 
 COCOAPODS: 1.3.1

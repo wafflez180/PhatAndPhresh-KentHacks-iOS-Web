@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Spring
 
-class GenerateButton: UIButton {
+class GenerateButton: SpringButton {
     
     var shadowLayer: CAShapeLayer!
     

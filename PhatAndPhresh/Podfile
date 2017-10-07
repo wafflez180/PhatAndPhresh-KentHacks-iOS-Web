@@ -7,6 +7,9 @@ target 'PhatAndPhresh' do
 
   # Pods for PhatAndPhresh
     pod "Pulsator"
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
+    pod 'NVActivityIndicatorView'
+    pod 'JTMaterialTransition', '~> 2.0'
 
   target 'PhatAndPhreshTests' do
     inherit! :search_paths
