@@ -148,6 +148,13 @@ Phresh</string>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-pM-3vu">
+                                <rect key="frame" x="27.5" y="582" width="60" height="60"/>
+                                <state key="normal" image="Exit Button"/>
+                                <connections>
+                                    <action selector="pressedExitButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="eLq-Id-bPE"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-p0-6vE">
                                 <rect key="frame" x="287.5" y="582" width="60" height="60"/>
                                 <state key="normal" image="Share Button"/>
@@ -183,11 +190,11 @@ Phresh</string>
                                     <action selector="pressedPlayButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="kmX-sn-ZDf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-pM-3vu">
-                                <rect key="frame" x="27.5" y="582" width="60" height="60"/>
-                                <state key="normal" image="Exit Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blq-qh-1jK">
+                                <rect key="frame" x="152" y="572" width="70" height="70"/>
+                                <state key="normal" image="Trash Button"/>
                                 <connections>
-                                    <action selector="pressedExitButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="eLq-Id-bPE"/>
+                                    <action selector="pressedTrashButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="7Bn-Bb-D3N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -202,18 +209,22 @@ Phresh</string>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="VX5-hF-aIv" secondAttribute="trailing" constant="20" id="Loq-l5-G5A"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="20" id="Rab-OB-jJx"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="h0n-BO-iHj" secondAttribute="bottom" constant="25" id="SNl-DW-GYy"/>
+                            <constraint firstItem="Blq-qh-1jK" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="XTv-EX-erN"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="bKD-QJ-Pbj"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="ZsH-pM-3vu" secondAttribute="bottom" constant="25" id="c26-pJ-jWv"/>
                             <constraint firstItem="h0n-BO-iHj" firstAttribute="leading" secondItem="ZsH-pM-3vu" secondAttribute="trailing" constant="20" id="cgc-6K-Ib6"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" constant="20" id="ckv-ZF-D71"/>
                             <constraint firstItem="CPh-p0-6vE" firstAttribute="leading" secondItem="Y0M-bf-uKT" secondAttribute="trailing" constant="20" id="vsS-4D-YMD"/>
+                            <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="Blq-qh-1jK" secondAttribute="bottom" constant="25" id="wLp-Sp-GzG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fKt-Au-FWn"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="ID1-um-tlS" id="feb-pk-i7s"/>
                         <outlet property="playButton" destination="Y0M-bf-uKT" id="1IN-Ad-Z7h"/>
+                        <outlet property="saveButton" destination="h0n-BO-iHj" id="VBU-KS-mT2"/>
                         <outlet property="textView" destination="VX5-hF-aIv" id="CGg-RV-wSY"/>
+                        <outlet property="trashButton" destination="Blq-qh-1jK" id="Cf7-2T-zVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrW-6U-J1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,5 +237,6 @@ Phresh</string>
         <image name="Play Button" width="70" height="70"/>
         <image name="Save Button" width="70" height="70"/>
         <image name="Share Button" width="60" height="60"/>
+        <image name="Trash Button" width="70" height="70"/>
     </resources>
 </document>

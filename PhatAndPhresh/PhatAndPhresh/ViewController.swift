@@ -88,12 +88,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         controller.view.backgroundColor = generateButton.backgroundColor
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self.transition
-        controller.setupTextView(rapBars:rapBars)
+        controller.setupUI(rapBars:rapBars, isSavedRap:false, savedIndex:-1)
         controller.delegate = self
         
         self.present(controller, animated: true, completion: {
             self.activityIndicator.stopAnimating()
             self.repeatedPulsator.start()
+            self.generateButton.setTitle(self.getRandomizedGenButtonTitle(), for: .normal)
+        })
+    }
+    
+    func segueToSavedRapVC(rapBars:String, view:UIView, savedIndex:Int){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ViewRapViewController") as! ViewRapViewController
+        
+        controller.view.backgroundColor = generateButton.backgroundColor
+        controller.modalPresentationStyle = .custom
+        controller.transitioningDelegate = self.transition
+        controller.setupUI(rapBars:rapBars, isSavedRap:true, savedIndex:savedIndex)
+        controller.delegate = self
+        
+        self.present(controller, animated: true, completion: {
             self.generateButton.setTitle(self.getRandomizedGenButtonTitle(), for: .normal)
         })
     }
@@ -150,7 +165,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-        //self.segueToRapVC(rapBars: rapBars)
+        let defaults = UserDefaults.standard
+        var savedTitlesArray = defaults.stringArray(forKey: "SavedRapTitles") ?? [String]()
+        var savedRapsArray = defaults.stringArray(forKey: "SavedRapBars") ?? [String]()
+        
+        print("Saved Titles Array: "+savedTitlesArray[indexPath.row])
+        print("Saved Raps Array: "+savedRapsArray[indexPath.row])
+
+        self.segueToSavedRapVC(rapBars: savedRapsArray[indexPath.row], view: collectionView.cellForItem(at: indexPath)!, savedIndex: indexPath.row)
     }
     
     // MARK: - ViewRapVCDelegate

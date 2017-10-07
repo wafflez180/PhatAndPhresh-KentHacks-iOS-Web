@@ -16,25 +16,37 @@ protocol ViewRapVCDelegate: class {
 }
 
 class ViewRapViewController: UIViewController {
-
+    
     @IBOutlet var textView: UITextView!
     @IBOutlet var activityIndicator: NVActivityIndicatorView!
+    @IBOutlet var trashButton: UIButton!
     @IBOutlet var playButton: UIButton!
+    @IBOutlet var saveButton: UIButton!
     weak var delegate: ViewRapVCDelegate?
+    
+    var savedIndex:Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - ViewRapViewController
-
+    
+    func setupUI(rapBars:String, isSavedRap:Bool, savedIndex:Int){
+        setupTextView(rapBars: rapBars)
+        playButton.isHidden = isSavedRap
+        saveButton.isHidden = isSavedRap
+        trashButton.isHidden = !isSavedRap
+        self.savedIndex = savedIndex
+    }
+    
     func setupTextView(rapBars:String){
         textView.attributedText = getHighlightedText(rapBars: rapBars, rhymedWords: [])
     }
@@ -61,11 +73,11 @@ class ViewRapViewController: UIViewController {
     }
     
     // MARK: - Actions
-
+    
     @IBAction func pressedShareButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
-
+        
         // set up activity view controller
         let textToShare = [ "Check out my phresh rap bars generated from Phat & Phresh! \n\n" + textView.text ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
@@ -95,6 +107,21 @@ class ViewRapViewController: UIViewController {
     @IBAction func pressedExitButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func pressedTrashButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        var savedTitlesArray = defaults.stringArray(forKey: "SavedRapTitles") ?? [String]()
+        var savedRapsArray = defaults.stringArray(forKey: "SavedRapBars") ?? [String]()
+        
+        savedTitlesArray.remove(at: savedIndex)
+        savedRapsArray.remove(at: savedIndex)
+        
+        defaults.set(savedTitlesArray, forKey: "SavedRapTitles")
+        defaults.set(savedRapsArray, forKey: "SavedRapBars")
+        
+        self.delegate?.dismissingVC()
         self.dismiss(animated: true)
     }
     
@@ -160,16 +187,16 @@ class ViewRapViewController: UIViewController {
             }
         }
     }
-
+    
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
