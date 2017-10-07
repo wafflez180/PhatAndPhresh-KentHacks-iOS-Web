@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import AudioToolbox
 
 class ViewRapViewController: UIViewController {
 
@@ -34,7 +35,9 @@ class ViewRapViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func pressedShareButton(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+
         // set up activity view controller
         let textToShare = [ "Check out my phresh rap bars generated from Phat & Phresh! \n\n" + textView.text ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
@@ -48,10 +51,13 @@ class ViewRapViewController: UIViewController {
     }
     
     @IBAction func pressedPlayButton(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
     
     @IBAction func pressedExitButton(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         self.dismiss(animated: true)
     }
     

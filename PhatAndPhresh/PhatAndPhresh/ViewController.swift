@@ -132,6 +132,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pressedGenerateButton(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         requestRap { rapBars in
             self.segueToRapVC(rapBars: rapBars)
         }
