@@ -24,10 +24,20 @@ class ViewRapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - ViewRapViewController
+
+    func setupTextView(rapBars:String){
+        textView.text = rapBars
+    }
+    
+    // MARK: - Actions
+
     @IBAction func pressedShareButton(_ sender: Any) {
     }
+    
     @IBAction func pressedPlayButton(_ sender: Any) {
     }
+    
     @IBAction func pressedExitButton(_ sender: Any) {
         self.dismiss(animated: true)
     }

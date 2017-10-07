@@ -11,6 +11,7 @@ import Pulsator
 import Spring
 import NVActivityIndicatorView
 import JTMaterialTransition
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -75,13 +76,14 @@ class ViewController: UIViewController {
         pulsator.start()
     }
     
-    func segueToRapVC(){
+    func segueToRapVC(rapBars:String){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ViewRapViewController")
+        let controller = storyboard.instantiateViewController(withIdentifier: "ViewRapViewController") as! ViewRapViewController
         
         controller.view.backgroundColor = generateButton.backgroundColor
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self.transition
+        controller.setupTextView(rapBars:rapBars)
         
         self.present(controller, animated: true, completion: {
             self.activityIndicator.stopAnimating()
@@ -90,22 +92,42 @@ class ViewController: UIViewController {
         })
     }
     
+    func requestRap(completion: @escaping (_ result: String) -> Void) {
+        Alamofire.request("http://phatandphresh.azurewebsites.net/api/phresh").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+                
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+                completion(utf8Text)
+            }
+        }
+    }
+    
     // MARK: Actions
     
     @IBAction func pressedDownOnGenerate(_ sender: Any) {
         generateButton.scaleX = 0.8
         generateButton.scaleY = 0.8
         generateButton.animate()
+        createSinglePulse()
+        self.repeatedPulsator.stop()
+        generateButton.setTitle("", for: .normal)
+        if !self.activityIndicator.isAnimating {
+            self.activityIndicator.startAnimating()
+        }
     }
     
     @IBAction func pressedGenerateButton(_ sender: Any) {
-        createSinglePulse()
-        generateButton.setTitle("", for: .normal)
-        repeatedPulsator.stop()
-        if !activityIndicator.isAnimating {
-            activityIndicator.startAnimating()
+        requestRap { rapBars in
+            self.segueToRapVC(rapBars: rapBars)
         }
-        segueToRapVC()
     }
 }
 

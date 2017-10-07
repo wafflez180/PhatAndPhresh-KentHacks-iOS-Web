@@ -10,6 +10,7 @@ target 'PhatAndPhresh' do
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
     pod 'NVActivityIndicatorView'
     pod 'JTMaterialTransition', '~> 2.0'
+    pod 'Alamofire', '~> 4.5'
 
   target 'PhatAndPhreshTests' do
     inherit! :search_paths
