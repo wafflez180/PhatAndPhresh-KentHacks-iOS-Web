@@ -9,6 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 import AudioToolbox
+import Alamofire
 
 class ViewRapViewController: UIViewController {
 
@@ -29,11 +30,12 @@ class ViewRapViewController: UIViewController {
     // MARK: - ViewRapViewController
 
     func setupTextView(rapBars:String){
-        //Highlight rhymes
-        let rhymedWords = ["World", "ll"]
-        
+        textView.attributedText = getHighlightedText(rapBars: rapBars, rhymedWords: [])
+    }
+    
+    func getHighlightedText(rapBars:String, rhymedWords:[String]) -> NSMutableAttributedString {
         let attributedText = NSMutableAttributedString.init(string: rapBars, attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20.0), NSAttributedStringKey.foregroundColor: UIColor.init(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)])
-
+        
         //https://stackoverflow.com/questions/27180184/color-all-occurrences-of-string-in-swift/27180679
         for rhyme in rhymedWords {
             let inputLength = attributedText.length
@@ -49,7 +51,7 @@ class ViewRapViewController: UIViewController {
                 }
             }
         }
-        textView.attributedText = attributedText
+        return attributedText
     }
     
     // MARK: - Actions
@@ -73,6 +75,13 @@ class ViewRapViewController: UIViewController {
     @IBAction func pressedPlayButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
+        if !self.activityIndicator.isAnimating {
+            self.activityIndicator.startAnimating()
+        }
+        requestRap { newRapBars in
+            self.textView.attributedText = self.getHighlightedText(rapBars: self.textView.text+"\n"+newRapBars, rhymedWords: [])
+            self.activityIndicator.stopAnimating()
+        }
     }
     
     @IBAction func pressedExitButton(_ sender: Any) {
@@ -80,6 +89,18 @@ class ViewRapViewController: UIViewController {
         generator.impactOccurred()
         self.dismiss(animated: true)
     }
+    
+    // MARK: - API
+    
+    func requestRap(completion: @escaping (_ result: String) -> Void) {
+        Alamofire.request("http://phatandphresh.azurewebsites.net/api/phresh").responseJSON { response in
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+                completion(utf8Text)
+            }
+        }
+    }
+
     
     /*
     // MARK: - Navigation

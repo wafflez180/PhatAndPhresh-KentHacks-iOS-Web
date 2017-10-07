@@ -119,7 +119,7 @@ Phresh</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="SFUIText-Bold"/>
@@ -157,15 +157,24 @@ Phresh</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0n-BO-iHj">
+                                <rect key="frame" x="147.5" y="562" width="80" height="80"/>
+                                <state key="normal" image="Play Button"/>
+                                <connections>
+                                    <action selector="pressedPlayButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="7Yx-Bu-12p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZsH-pM-3vu" firstAttribute="top" secondItem="VX5-hF-aIv" secondAttribute="bottom" constant="50" id="0gM-NH-4T3"/>
+                            <constraint firstItem="h0n-BO-iHj" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="1xC-eq-J8N"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="CPh-p0-6vE" secondAttribute="bottom" constant="25" id="6Er-N7-WIQ"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerY" secondItem="SLz-YL-Woh" secondAttribute="centerY" id="Bjf-xY-Ugy"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="VX5-hF-aIv" secondAttribute="trailing" constant="20" id="Loq-l5-G5A"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="CPh-p0-6vE" secondAttribute="trailing" constant="50" id="Mqo-FK-sQg"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="20" id="Rab-OB-jJx"/>
+                            <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="h0n-BO-iHj" secondAttribute="bottom" constant="25" id="SNl-DW-GYy"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="bKD-QJ-Pbj"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="ZsH-pM-3vu" secondAttribute="bottom" constant="25" id="c26-pJ-jWv"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" constant="20" id="ckv-ZF-D71"/>
@@ -185,6 +194,7 @@ Phresh</string>
     </scenes>
     <resources>
         <image name="Exit Button" width="60" height="60"/>
+        <image name="Play Button" width="80" height="80"/>
         <image name="Share Button" width="60" height="60"/>
     </resources>
 </document>

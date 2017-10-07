@@ -99,14 +99,16 @@ class ViewController: UIViewController {
         return genButtonTextList[randIndex]
     }
     
+    // MARK: API
+
     func requestRap(completion: @escaping (_ result: String) -> Void) {
         Alamofire.request("http://phatandphresh.azurewebsites.net/api/phresh").responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
+            //print("Request: \(String(describing: response.request))")   // original url request
+            //print("Response: \(String(describing: response.response))") // http url response
+            //print("Result: \(response.result)")                         // response serialization result
             
             if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
+                //print("JSON: \(json)") // serialized json response
                 
             }
             
