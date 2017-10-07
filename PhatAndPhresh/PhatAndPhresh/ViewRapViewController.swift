@@ -10,6 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import AudioToolbox
 import Alamofire
+import SwiftyJSON
 
 protocol ViewRapVCDelegate: class {
     func dismissingVC()
@@ -39,16 +40,16 @@ class ViewRapViewController: UIViewController {
     
     // MARK: - ViewRapViewController
     
-    func setupUI(rapBars:String, isSavedRap:Bool, savedIndex:Int){
-        setupTextView(rapBars: rapBars)
+    func setupUI(rapBars:String, rhymes:[String], isSavedRap:Bool, savedIndex:Int){
+        setupTextView(rapBars: rapBars, rhymes:rhymes)
         playButton.isHidden = isSavedRap
         saveButton.isHidden = isSavedRap
         trashButton.isHidden = !isSavedRap
         self.savedIndex = savedIndex
     }
     
-    func setupTextView(rapBars:String){
-        textView.attributedText = getHighlightedText(rapBars: rapBars, rhymedWords: [])
+    func setupTextView(rapBars:String, rhymes:[String]){
+        textView.attributedText = getHighlightedText(rapBars: rapBars, rhymedWords: rhymes)
     }
     
     func getHighlightedText(rapBars:String, rhymedWords:[String]) -> NSMutableAttributedString {
@@ -97,8 +98,8 @@ class ViewRapViewController: UIViewController {
             self.activityIndicator.startAnimating()
             self.playButton.isEnabled = false
         }
-        requestRap { newRapBars in
-            self.textView.attributedText = self.getHighlightedText(rapBars: self.textView.text+"\n"+newRapBars, rhymedWords: [])
+        requestRap { newRapBars, rhymes in
+            self.textView.attributedText = self.getHighlightedText(rapBars: self.textView.text+"\n"+newRapBars, rhymedWords: rhymes)
             self.activityIndicator.stopAnimating()
             self.playButton.isEnabled = true
         }
@@ -179,11 +180,14 @@ class ViewRapViewController: UIViewController {
     
     // MARK: - API
     
-    func requestRap(completion: @escaping (_ result: String) -> Void) {
+    func requestRap(completion: @escaping  (_ rapBars: String, _ rhymes: [String]) -> Void) {
         Alamofire.request("http://phatandphresh.azurewebsites.net/api/phresh").responseJSON { response in
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-                completion(utf8Text)
+                let json = JSON(data: data)
+                print(json)
+                var rhymes:[String] = json["rhymes"].arrayValue.map { $0.stringValue}
+                var verses:[String] = json["verses"].arrayValue.map { $0.stringValue}
+                completion(verses[0], rhymes)
             }
         }
     }

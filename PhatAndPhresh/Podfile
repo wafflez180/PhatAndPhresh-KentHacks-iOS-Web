@@ -11,6 +11,7 @@ target 'PhatAndPhresh' do
     pod 'NVActivityIndicatorView'
     pod 'JTMaterialTransition', '~> 2.0'
     pod 'Alamofire', '~> 4.5'
+    pod 'SwiftyJSON'
 
   target 'PhatAndPhreshTests' do
     inherit! :search_paths

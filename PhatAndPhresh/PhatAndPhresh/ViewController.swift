@@ -12,6 +12,7 @@ import Spring
 import NVActivityIndicatorView
 import JTMaterialTransition
 import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ViewRapVCDelegate {
     
@@ -81,14 +82,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         pulsator.start()
     }
     
-    func segueToRapVC(rapBars:String){
+    func segueToRapVC(rapBars:String, rhymes:[String]){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "ViewRapViewController") as! ViewRapViewController
         
         controller.view.backgroundColor = generateButton.backgroundColor
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self.transition
-        controller.setupUI(rapBars:rapBars, isSavedRap:false, savedIndex:-1)
+        controller.setupUI(rapBars:rapBars, rhymes:rhymes, isSavedRap:false, savedIndex:-1)
         controller.delegate = self
         
         self.present(controller, animated: true, completion: {
@@ -98,14 +99,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         })
     }
     
-    func segueToSavedRapVC(rapBars:String, view:UIView, savedIndex:Int){
+    func segueToSavedRapVC(rapBars:String, rhymes:[String], view:UIView, savedIndex:Int){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "ViewRapViewController") as! ViewRapViewController
         
         controller.view.backgroundColor = generateButton.backgroundColor
         controller.modalPresentationStyle = .custom
         controller.transitioningDelegate = self.transition
-        controller.setupUI(rapBars:rapBars, isSavedRap:true, savedIndex:savedIndex)
+        controller.setupUI(rapBars:rapBars, rhymes:rhymes, isSavedRap:true, savedIndex:savedIndex)
         controller.delegate = self
         
         self.present(controller, animated: true, completion: {
@@ -121,20 +122,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // MARK: API
 
-    func requestRap(completion: @escaping (_ result: String) -> Void) {
+    func requestRap(completion: @escaping (_ rapBars: String, _ rhymes: [String]) -> Void) {
         Alamofire.request("http://phatandphresh.azurewebsites.net/api/phresh").responseJSON { response in
             //print("Request: \(String(describing: response.request))")   // original url request
             //print("Response: \(String(describing: response.response))") // http url response
             //print("Result: \(response.result)")                         // response serialization result
             
             if let json = response.result.value {
-                //print("JSON: \(json)") // serialized json response
-                
+                print("JSON: \(json)") // serialized json response
             }
             
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-                completion(utf8Text)
+                let json = JSON(data: data)
+                print(json)
+                var rhymes:[String] = json["rhymes"].arrayValue.map { $0.stringValue}
+                var verses:[String] = json["verses"].arrayValue.map { $0.stringValue}
+                completion(verses[0], rhymes)
             }
         }
     }
@@ -172,7 +175,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print("Saved Titles Array: "+savedTitlesArray[indexPath.row])
         print("Saved Raps Array: "+savedRapsArray[indexPath.row])
 
-        self.segueToSavedRapVC(rapBars: savedRapsArray[indexPath.row], view: collectionView.cellForItem(at: indexPath)!, savedIndex: indexPath.row)
+        self.segueToSavedRapVC(rapBars: savedRapsArray[indexPath.row], rhymes: [], view: collectionView.cellForItem(at: indexPath)!, savedIndex: indexPath.row)
     }
     
     // MARK: - ViewRapVCDelegate
@@ -198,8 +201,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func pressedGenerateButton(_ sender: Any) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
-        requestRap { rapBars in
-            self.segueToRapVC(rapBars: rapBars)
+        requestRap { rapBars, rhymes in
+            self.segueToRapVC(rapBars: rapBars, rhymes: rhymes)
         }
     }
 }
