@@ -114,30 +114,30 @@ Phresh</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-hF-aIv">
-                                <rect key="frame" x="20" y="40" width="335" height="472"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-hF-aIv">
+                                <rect key="frame" x="20" y="40" width="335" height="492"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="SFUIText-Bold"/>
+                                            <font key="NSOriginalFont" size="20" name="SFUIText-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkX-h4-ZGN">
-                                <rect key="frame" x="147" y="562" width="80" height="80"/>
-                                <state key="normal" image="Play Button"/>
-                                <connections>
-                                    <action selector="pressedPlayButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="dL7-Cw-Biv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-pM-3vu">
-                                <rect key="frame" x="47" y="582" width="60" height="60"/>
+                                <rect key="frame" x="50" y="582" width="60" height="60"/>
                                 <state key="normal" image="Exit Button"/>
                                 <connections>
                                     <action selector="pressedExitButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="eLq-Id-bPE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-p0-6vE">
-                                <rect key="frame" x="267" y="582" width="60" height="60"/>
+                                <rect key="frame" x="265" y="582" width="60" height="60"/>
                                 <state key="normal" image="Share Button"/>
                                 <connections>
                                     <action selector="pressedShareButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="gKS-y4-hNp"/>
@@ -160,18 +160,16 @@ Phresh</string>
                         </subviews>
                         <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ZsH-pM-3vu" firstAttribute="top" secondItem="VX5-hF-aIv" secondAttribute="bottom" constant="50" id="0gM-NH-4T3"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="CPh-p0-6vE" secondAttribute="bottom" constant="25" id="6Er-N7-WIQ"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerY" secondItem="SLz-YL-Woh" secondAttribute="centerY" id="Bjf-xY-Ugy"/>
-                            <constraint firstItem="dkX-h4-ZGN" firstAttribute="leading" secondItem="ZsH-pM-3vu" secondAttribute="trailing" constant="40" id="BqF-OA-Xr8"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="VX5-hF-aIv" secondAttribute="trailing" constant="20" id="Loq-l5-G5A"/>
-                            <constraint firstItem="dkX-h4-ZGN" firstAttribute="top" secondItem="VX5-hF-aIv" secondAttribute="bottom" constant="50" id="OXP-jy-f2c"/>
+                            <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="CPh-p0-6vE" secondAttribute="trailing" constant="50" id="Mqo-FK-sQg"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="20" id="Rab-OB-jJx"/>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="bKD-QJ-Pbj"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="ZsH-pM-3vu" secondAttribute="bottom" constant="25" id="c26-pJ-jWv"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" constant="20" id="ckv-ZF-D71"/>
-                            <constraint firstItem="CPh-p0-6vE" firstAttribute="leading" secondItem="dkX-h4-ZGN" secondAttribute="trailing" constant="40" id="vMq-UA-H4D"/>
-                            <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="dkX-h4-ZGN" secondAttribute="bottom" constant="25" id="y0S-KV-dU0"/>
-                            <constraint firstItem="dkX-h4-ZGN" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="yGu-dr-tD4"/>
+                            <constraint firstItem="ZsH-pM-3vu" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="50" id="waQ-98-vjI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fKt-Au-FWn"/>
                     </view>
@@ -187,7 +185,6 @@ Phresh</string>
     </scenes>
     <resources>
         <image name="Exit Button" width="60" height="60"/>
-        <image name="Play Button" width="80" height="80"/>
         <image name="Share Button" width="60" height="60"/>
     </resources>
 </document>

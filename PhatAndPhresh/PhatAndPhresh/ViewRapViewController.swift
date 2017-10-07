@@ -29,7 +29,27 @@ class ViewRapViewController: UIViewController {
     // MARK: - ViewRapViewController
 
     func setupTextView(rapBars:String){
-        textView.text = rapBars
+        //Highlight rhymes
+        let rhymedWords = ["World", "ll"]
+        
+        let attributedText = NSMutableAttributedString.init(string: rapBars, attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20.0), NSAttributedStringKey.foregroundColor: UIColor.init(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)])
+
+        //https://stackoverflow.com/questions/27180184/color-all-occurrences-of-string-in-swift/27180679
+        for rhyme in rhymedWords {
+            let inputLength = attributedText.length
+            let searchString = rhyme
+            let searchLength = searchString.characters.count
+            var range = NSRange(location: 0, length: attributedText.length)
+            
+            while (range.location != NSNotFound) {
+                range = (attributedText.string as NSString).range(of: searchString, options: [], range: range)
+                if (range.location != NSNotFound) {
+                    attributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.init(red: 248.0/255.0, green: 231.0/255.0, blue: 28.0/255.0, alpha: 1.0) , range: NSRange(location: range.location, length: searchLength))
+                    range = NSRange(location: range.location + range.length, length: inputLength - (range.location + range.length))
+                }
+            }
+        }
+        textView.attributedText = attributedText
     }
     
     // MARK: - Actions
