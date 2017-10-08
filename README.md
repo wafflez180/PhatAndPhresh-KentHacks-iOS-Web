@@ -6,9 +6,9 @@ Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator
 
 This project was in competition for Kent Hacks Fall 2017 at Kent University, Ohio.
 
-<img src="http://arthurdearaujo.com/PhatPhresh-Art/1-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/2-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/4-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 4" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/5-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 5" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/7-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 7" width="160" />
-<img src="http://arthurdearaujo.com/PhatPhresh-Art/1-mac-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 1 Mac" width="405"/>
-<img src="http://arthurdearaujo.com/PhatPhresh-Art/2-mac-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2 Mac" width="405"/>
+<img src="/PhatPhresh-Art/1-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2" width="160" /> <img src="/PhatPhresh-Art/2-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2" width="160" /> <img src="/PhatPhresh-Art/4-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 4" width="160" /> <img src="/PhatPhresh-Art/5-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 5" width="160" /> <img src="/PhatPhresh-Art/7-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 7" width="160" />
+<img src="/PhatPhresh-Art/1-mac-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 1 Mac" width="405"/>
+<img src="/PhatPhresh-Art/2-mac-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2 Mac" width="405"/>
 
 ## Table of Contents
 
