@@ -1,4 +1,4 @@
-<img src="http://arthurdearaujo.com/PhatPhresh-Art/PhatAndPhresh-20px" alt="Phat & Phresh Logo" title="Phat & Phresh Logo" align="right" height="120" />
+<img src="http://arthurdearaujo.com/PhatPhresh-Art/PhatAndPhresh-120px.png" alt="Phat & Phresh Logo" align="right" height="120" />
 
 # Phat&Phresh for iOS and Web 
 Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator (also avaliable on Amazon Alexa)
@@ -6,6 +6,8 @@ Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator (a
 This project was in competition for Kent Hacks Fall 2017 at Kent University, Ohio.
 
 <img src="http://arthurdearaujo.com/PhatPhresh-Art/1-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/2-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/4-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 4" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/5-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 5" width="160" /> <img src="http://arthurdearaujo.com/PhatPhresh-Art/7-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 7" width="160" />
+<img src="http://arthurdearaujo.com/PhatPhresh-Art/1-mac-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 1 Mac" width="405"/>
+<img src="http://arthurdearaujo.com/PhatPhresh-Art/2-mac-phatphresh-screenshot.png" alt="Phat&Phresh Screenshot 2 Mac" width="405"/>
 
 ## Table of Contents
 
