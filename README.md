@@ -1,7 +1,8 @@
 <img src="http://arthurdearaujo.com/PhatPhresh-Art/PhatAndPhresh-120px.png" alt="Phat & Phresh Logo" align="right" height="120" />
 
 # Phat&Phresh for iOS and Web 
-Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator (also avaliable on Amazon Alexa)
+Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator 
+(also avaliable on Amazon Alexa)
 
 This project was in competition for Kent Hacks Fall 2017 at Kent University, Ohio.
 
@@ -18,7 +19,8 @@ This project was in competition for Kent Hacks Fall 2017 at Kent University, Ohi
 ## <a name="key-features"></a>Key Features
 
 * Generated Rap/Rhymes Retrieval
-  - A randomized verse with rhymes are retrieved from a custom-made algorithim 
+  - A randomized verse with rhymes are retrieved from a custom-made algorithim
+  - Endpoint: http://phatandphresh.azurewebsites.net/api/phresh
 * Rhyme Highlighting
 * Saving Raps
   - Users can save a verse or a list of verses, which is shown on the bottom of the home screen
