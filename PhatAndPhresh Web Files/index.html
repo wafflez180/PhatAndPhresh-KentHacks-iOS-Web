@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Phat & Phresh</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body id="grad">
+  <h1>Phat & Phresh</h1>
+  <div class="gps_ring"></div>
+  <div id="button" type="button" onclick="getRapBars()">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+    <h2 id="btText">
+      Give me some phat bars
+    </h2>
+  </div>
+  <footer>
+    <p>Built by Arthur De Araujo, Liam Gensel, Declan Hopkins and Peter Gottesman (aka Peter)</p>
+  </footer>
+  <script type="text/javascript">
+  $( ".spinner" ).hide()
+
+  function getRapBars(){
+      $( "#btText" ).hide()
+      $( ".spinner" ).show()
+      fetch("http://phatandphresh.azurewebsites.net/api/phresh", {
+        method: "GET",
+        headers: {
+          "Content-Type" : "application/json"
+        }
+      }).then(function(response) {
+          return response.json()
+        }).then(function(data) {
+          console.log(data);
+          var myDomElement = document.get
+          $( "#btText" ).text( data["verses"] ); // Finds all anchors inside the DOM element.
+          $( "#btText" ).show()
+          $( ".spinner" ).hide()
+        }).catch(function() {
+          console.log("Booo");
+        });
+  };
+  </script>
+</body>
+
+</html>
