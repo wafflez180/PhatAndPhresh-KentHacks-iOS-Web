@@ -17,6 +17,8 @@
 <body id="grad">
   <h1>Phat & Phresh</h1>
   <div class="gps_ring"></div>
+  <!-- Twitter -->
+
   <div id="button" type="button" onclick="getRapBars()">
     <div class="spinner">
       <div class="rect1"></div>
@@ -29,6 +31,9 @@
       Give me some phat bars
     </h2>
   </div>
+  <a class="button" id="twitterButton" href="https://twitter.com/share?url=https://phatandphresh.com&amp;text=%0A;hashtags=phatandphresh" target="_blank">
+      <img src="https://simplesharebuttons.com/images/somacro/twitter.png" height="50px" width="50px" alt="Twitter" />
+  </a>
   <footer>
     <p>Built by Arthur De Araujo, Liam Gensel, Declan Hopkins and Peter Gottesman (aka Peter)</p>
   </footer>
@@ -49,6 +54,7 @@
           console.log(data);
           var myDomElement = document.get
           $( "#btText" ).text( data["verses"] ); // Finds all anchors inside the DOM element.
+          $( "#twitterButton" ).attr( 'href', "https://twitter.com/share?url=https://phatandphresh.com&amp;text="+(data["verses"])+"%0A;hashtags=phatandphresh" );
           $( "#btText" ).show()
           $( ".spinner" ).hide()
         }).catch(function() {

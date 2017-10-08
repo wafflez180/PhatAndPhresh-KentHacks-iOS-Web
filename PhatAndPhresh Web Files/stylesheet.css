@@ -78,6 +78,12 @@ h2 {
   left: calc(50% - 150px);
 }
 
+#twitterButton{
+  position: absolute;
+  top: calc(50% + 150px);
+  left: calc(50% + 150px);
+}
+
 #btText {
   cursor: pointer;
 }
