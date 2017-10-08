@@ -3,6 +3,7 @@
 # Phat&Phresh for iOS and Web 
 Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator 
 (also avaliable on Amazon Alexa)
+[Phat&Phresh Website](http://162.253.176.177/)
 
 This project was in competition for Kent Hacks Fall 2017 at Kent University, Ohio.
 
