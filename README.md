@@ -1,4 +1,4 @@
-<img src="http://arthurdearaujo.com/PhatPhresh-Art/PhatAndPhresh-120px.png" alt="Phat & Phresh Logo" align="right" height="120" />
+<img src="/PhatPhresh-Art/PhatAndPhresh-120px.png" alt="Phat & Phresh Logo" align="right" height="120" />
 
 # Phat&Phresh for iOS and Web 
 Phat&Phresh is an elegent satisfying cross-platform rapping/rhyming generator 
