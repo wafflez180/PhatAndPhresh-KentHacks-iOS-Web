@@ -13,7 +13,6 @@ h2 {
   margin: auto;
   cursor: default;
   font-family: 'Roboto', sans-serif;
-  font-size: 47px;
   color: white;
   padding: 30px;
 
@@ -58,6 +57,7 @@ h2 {
 	-moz-border-radius: 200px;
 	-webkit-border-radius: 200px;
 	border-radius: 200px;
+  font-size: 30px;
 
   text-align: center;
   justify-content: center;
@@ -71,6 +71,7 @@ h2 {
 #button:active {
   transition: 0.0s ease;
 
+  font-size: 12px;
   height: 300px;
   width: 300px;
   top: calc(50% - 150px);
