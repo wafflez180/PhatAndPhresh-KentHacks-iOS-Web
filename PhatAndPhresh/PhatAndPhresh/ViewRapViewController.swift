@@ -26,6 +26,7 @@ class ViewRapViewController: UIViewController {
     weak var delegate: ViewRapVCDelegate?
     
     var savedIndex:Int = -1
+    var rhymingWords:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +54,12 @@ class ViewRapViewController: UIViewController {
     }
     
     func getHighlightedText(rapBars:String, rhymedWords:[String]) -> NSMutableAttributedString {
+        rhymingWords+=rhymedWords;
         let attributedText = NSMutableAttributedString.init(string: rapBars, attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20.0), NSAttributedStringKey.foregroundColor: UIColor.init(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)])
         
         //https://stackoverflow.com/questions/27180184/color-all-occurrences-of-string-in-swift/27180679
-        for rhyme in rhymedWords {
+        // Highlight all rhymes colored lightgrey
+        for rhyme in rhymingWords {
             let inputLength = attributedText.length
             let searchString = rhyme
             let searchLength = searchString.characters.count
@@ -65,7 +68,7 @@ class ViewRapViewController: UIViewController {
             while (range.location != NSNotFound) {
                 range = (attributedText.string as NSString).range(of: searchString, options: [], range: range)
                 if (range.location != NSNotFound) {
-                    attributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.init(red: 248.0/255.0, green: 231.0/255.0, blue: 28.0/255.0, alpha: 1.0) , range: NSRange(location: range.location, length: searchLength))
+                    attributedText.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.init(red: 117.0/255.0, green: 117.0/255.0, blue: 117.0/255.0, alpha: 1.0) , range: NSRange(location: range.location, length: searchLength))
                     range = NSRange(location: range.location + range.length, length: inputLength - (range.location + range.length))
                 }
             }
@@ -80,7 +83,7 @@ class ViewRapViewController: UIViewController {
         generator.impactOccurred()
         
         // set up activity view controller
-        let textToShare = [ "Check out my phresh rap bars generated from Phat & Phresh! \n\n" + textView.text ]
+        let textToShare = [ textView.text+"\n#PhatAndPhresh\nhttp://phatandphresh.com" ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         
