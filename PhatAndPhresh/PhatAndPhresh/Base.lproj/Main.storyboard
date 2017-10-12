@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhatAndPhresh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWf-MS-mVi">
@@ -27,7 +27,7 @@ Phresh</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-EN-qAh" customClass="View">
-                                <rect key="frame" x="100" y="246" width="175" height="175"/>
+                                <rect key="frame" x="72.5" y="196.5" width="175" height="175"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KxO-Dc-2Zt" customClass="GenerateButton" customModule="PhatAndPhresh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
@@ -86,7 +86,7 @@ Phresh</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Y0-ym-2LC">
-                                <rect key="frame" x="10" y="567" width="355" height="100"/>
+                                <rect key="frame" x="10" y="468" width="300" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9km-KO-bR0"/>
@@ -130,11 +130,11 @@ Phresh</string>
             <objects>
                 <viewController storyboardIdentifier="ViewRapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ROZ-Mh-cJ0" customClass="ViewRapViewController" customModule="PhatAndPhresh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLz-YL-Woh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-hF-aIv">
-                                <rect key="frame" x="20" y="40" width="335" height="492"/>
+                                <rect key="frame" x="20" y="60" width="280" height="373"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -149,49 +149,52 @@ Phresh</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsH-pM-3vu">
-                                <rect key="frame" x="27.5" y="582" width="60" height="60"/>
+                                <rect key="frame" x="0.0" y="483" width="60" height="60"/>
                                 <state key="normal" image="Exit Button"/>
                                 <connections>
                                     <action selector="pressedExitButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="eLq-Id-bPE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-p0-6vE">
-                                <rect key="frame" x="287.5" y="582" width="60" height="60"/>
+                                <rect key="frame" x="260" y="483" width="60" height="60"/>
                                 <state key="normal" image="Share Button"/>
                                 <connections>
                                     <action selector="pressedShareButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="gKS-y4-hNp"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ID1-um-tlS" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="162.5" y="308" width="50" height="50"/>
+                                <rect key="frame" x="142.5" y="20" width="35" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="FEy-YY-JEf"/>
-                                    <constraint firstAttribute="width" constant="50" id="Pds-uf-Gpp"/>
+                                    <constraint firstAttribute="height" constant="35" id="FEy-YY-JEf"/>
+                                    <constraint firstAttribute="width" constant="35" id="Pds-uf-Gpp"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineSpinFadeLoader"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineScalePulseOut"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0n-BO-iHj">
-                                <rect key="frame" x="107.5" y="572" width="70" height="70"/>
+                                <rect key="frame" x="80" y="473" width="70" height="70"/>
                                 <state key="normal" image="Save Button"/>
                                 <connections>
                                     <action selector="pressedSaveButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="Bh2-fb-Cbk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0M-bf-uKT">
-                                <rect key="frame" x="197.5" y="572" width="70" height="70"/>
+                                <rect key="frame" x="170" y="473" width="70" height="70"/>
                                 <state key="normal" image="Play Button"/>
                                 <connections>
                                     <action selector="pressedPlayButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="kmX-sn-ZDf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blq-qh-1jK">
-                                <rect key="frame" x="152" y="572" width="70" height="70"/>
+                                <rect key="frame" x="125" y="473" width="70" height="70"/>
                                 <state key="normal" image="Trash Button"/>
                                 <connections>
                                     <action selector="pressedTrashButton:" destination="ROZ-Mh-cJ0" eventType="touchUpInside" id="7Bn-Bb-D3N"/>
@@ -204,8 +207,8 @@ Phresh</string>
                             <constraint firstItem="h0n-BO-iHj" firstAttribute="trailing" secondItem="SLz-YL-Woh" secondAttribute="centerX" constant="-10" id="1xC-eq-J8N"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="CPh-p0-6vE" secondAttribute="bottom" constant="25" id="6Er-N7-WIQ"/>
                             <constraint firstItem="Y0M-bf-uKT" firstAttribute="leading" secondItem="SLz-YL-Woh" secondAttribute="centerX" constant="10" id="7Fn-sh-uQq"/>
-                            <constraint firstItem="ID1-um-tlS" firstAttribute="centerY" secondItem="SLz-YL-Woh" secondAttribute="centerY" id="Bjf-xY-Ugy"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="Y0M-bf-uKT" secondAttribute="bottom" constant="25" id="Fqi-3l-TNy"/>
+                            <constraint firstItem="ID1-um-tlS" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" id="KKB-g5-ase"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="trailing" secondItem="VX5-hF-aIv" secondAttribute="trailing" constant="20" id="Loq-l5-G5A"/>
                             <constraint firstItem="VX5-hF-aIv" firstAttribute="leading" secondItem="fKt-Au-FWn" secondAttribute="leading" constant="20" id="Rab-OB-jJx"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="h0n-BO-iHj" secondAttribute="bottom" constant="25" id="SNl-DW-GYy"/>
@@ -213,7 +216,7 @@ Phresh</string>
                             <constraint firstItem="ID1-um-tlS" firstAttribute="centerX" secondItem="SLz-YL-Woh" secondAttribute="centerX" id="bKD-QJ-Pbj"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="ZsH-pM-3vu" secondAttribute="bottom" constant="25" id="c26-pJ-jWv"/>
                             <constraint firstItem="h0n-BO-iHj" firstAttribute="leading" secondItem="ZsH-pM-3vu" secondAttribute="trailing" constant="20" id="cgc-6K-Ib6"/>
-                            <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="fKt-Au-FWn" secondAttribute="top" constant="20" id="ckv-ZF-D71"/>
+                            <constraint firstItem="VX5-hF-aIv" firstAttribute="top" secondItem="ID1-um-tlS" secondAttribute="bottom" constant="5" id="oby-fO-Ml1"/>
                             <constraint firstItem="CPh-p0-6vE" firstAttribute="leading" secondItem="Y0M-bf-uKT" secondAttribute="trailing" constant="20" id="vsS-4D-YMD"/>
                             <constraint firstItem="fKt-Au-FWn" firstAttribute="bottom" secondItem="Blq-qh-1jK" secondAttribute="bottom" constant="25" id="wLp-Sp-GzG"/>
                         </constraints>
@@ -229,7 +232,7 @@ Phresh</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrW-6U-J1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="54"/>
+            <point key="canvasLocation" x="1096.875" y="53.87323943661972"/>
         </scene>
     </scenes>
     <resources>
